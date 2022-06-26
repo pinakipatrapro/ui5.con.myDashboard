@@ -1,0 +1,5 @@
+<mvc:View controllerName="ui5.con.myDashboard.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View>

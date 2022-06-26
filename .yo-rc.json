@@ -1,0 +1,22 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "myDashboard",
+    "namespaceUI5": "ui5.con",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Local resources (OpenUI5)",
+    "newdir": true,
+    "codeassist": true,
+    "namespaceURI": "ui5/con",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
