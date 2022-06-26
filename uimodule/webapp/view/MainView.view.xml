@@ -1,5 +1,19 @@
-<mvc:View controllerName="ui5.con.myDashboard.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="ui5.con.myDashboard.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:dnd="ui5-cc-dndashboard">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <dnd:Dashboard class="sapUiSmallMargin" height="80vh"
+            tiles="{
+                path:'/tiles',
+                factory: '.dashboardFactory'
+            }"
+        >
+            <dnd:header>
+                <Toolbar>
+                    <Title text="Chart Showcase"/>
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://edit" text="Edit Dashboard" press="editDashboard"/>
+                    <Button icon="sap-icon://refresh" text="Randomize Color" press="randomizeColor"/>
+                </Toolbar>    
+            </dnd:header>
+        </dnd:Dashboard>
     </Page>
 </mvc:View>
