@@ -13,7 +13,13 @@
     "sourceTemplate": {
       "id": "@sap-ux/fiori-freestyle-writer:basic",
       "version": "0.11.15"
-    }
+    },
+    "dataSources": {
+			"localData": {
+				"uri": "utils/Data.json",
+				"type": "JSON"
+			}
+		}
   },
   "sap.ui": {
     "technology": "UI5",
@@ -50,7 +56,11 @@
         "settings": {
           "bundleName": "ui5.con.myDashboard.i18n.i18n"
         }
-      }
+      },
+      "": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "localData"
+			}
     },
     "resources": {
       "css": [
