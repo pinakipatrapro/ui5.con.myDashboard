@@ -1239,6 +1239,50 @@
             "sublabel": "Ads",
             "value": 152
             }]
+        },
+        {
+          "cardType":"dndChart",
+          "posx":0,
+          "posy":6,
+          "width":2,
+          "height":5,
+          "title": "Pie Chart",
+          "chartType": "pieChart",
+          "xGrid": true,
+          "yGrid": true,
+          "darkMode": true,
+          "showLegend": true,
+          "legendPosition": "bottom",
+          "enableFilledLine": true,
+          "dataPointColor": "white",
+          "measureColour": [
+            "#efa03b",
+            "#fe5b3a",
+            "#afafaf",
+            "#afafaf"
+          ],
+          "showDataPoints": true,
+          "smartNumberFormat": true,
+          "measure": [
+            "name"
+          ],
+          "dimension": [
+              "data"    
+          ],
+          "data": [
+              {
+                  "name": "Chrome",
+                  "data": 46.02
+              },
+              {
+                  "name": "IE",
+                  "data": 20.47
+              },
+              {
+                  "name": "Firefox",
+                  "data": 17.71
+              }
+          ]
         }
     ]
   }
