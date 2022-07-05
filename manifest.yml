@@ -1,0 +1,7 @@
+applications:
+- name:      UI5ConDashboard
+  instances: 1
+  memory: 128M
+  disk_quota: 256M
+  path:      uimodule/dist
+  buildpack: https://github.com/cloudfoundry-community/staticfile-buildpack.git
