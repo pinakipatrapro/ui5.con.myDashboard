@@ -5,7 +5,26 @@ sap.ui.define([
   ],
     function (DashboardTile, DashboardChart, FunnelChart) {
         "use strict";
-  
+        
+        function randomIntFromInterval(min, max) {  
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        var randomizeData =  function(oEvent){
+            var tilesData = oEvent.getSource().getModel().getProperty('/tiles');
+            tilesData.forEach(e=>{
+                if(e.cardType !== 'dndChart'){
+                    return;
+                }
+                e.data.forEach(f=>{
+                    Object.keys(f).forEach(g=>{
+                        if(typeof(f[g]) == 'number'){
+                            f[g]=f[g]*randomIntFromInterval(90,110)/100
+                        }
+                    })
+                })
+            });
+            sap.ui.getCore().byId('__dashboard0').rerender()
+        }
         return function (sId, oContext) {
   
             if (oContext.getProperty("cardType") === 'dndChart') {
@@ -67,6 +86,9 @@ sap.ui.define([
                             }),
                             new sap.m.ComboBox({
                                 width: "100%",
+                                change : function(oEvent){
+                                    randomizeData(oEvent)
+                                },
                                 items: {
                                     path: "items",
                                     template: new sap.ui.core.Item({
@@ -83,14 +105,26 @@ sap.ui.define([
                     "posy": "{posy}",
                     "width": "{width}",
                     "height": "{height}",
-                    "content": new sap.m.List({
-                        mode: "MultiSelect",
-                        items: {
-                            path: "items",
-                            template: new sap.m.StandardListItem({
-                                title: "{name}"
+                    "content": new sap.m.VBox({
+                        items:[
+                            new sap.m.Label({
+                                text: "{text}"
+                            }),
+                            // @ts-ignore
+                            new sap.m.List({
+                                selectionChange: function(oEvent){
+                                    randomizeData(oEvent)
+                                },
+                                mode: "MultiSelect",
+                                items: {
+                                    path: "items",
+                                    template: new sap.m.StandardListItem({
+                                        title: "{name}",
+                                        selected:"{selected}"
+                                    })
+                                }
                             })
-                        }
+                        ]
                     })
                 })
             } else if (oContext.getProperty("cardType") === 'funnel') {
