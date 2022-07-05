@@ -8,7 +8,7 @@
         >
             <dnd:header>
                 <Toolbar>
-                    <Title text="Chart Showcase"/>
+                    <Title text="My Dashboard"/>
                     <ToolbarSpacer/>
                     <Button icon="sap-icon://edit" text="Edit Dashboard" press="editDashboard"/>
                     <Button icon="sap-icon://refresh" text="Randomize Color" press="randomizeColor"/>

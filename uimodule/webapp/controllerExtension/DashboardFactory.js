@@ -50,7 +50,7 @@ sap.ui.define([
                     "width": "{width}",
                     "height": "{height}",
                     "content": new sap.m.Image({
-                        height: "4rem",
+                        height: "3rem",
                         src: "{url}"
                     })
                 })
