@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
-    "build:ui": "run-s  build:uimodule && ncp ./uimodule/dist  demo",
+    "build:ui": "run-s  build:uimodule && ncp ./uimodule/dist  docs",
     "test": "run-s lint karma",
     "karma-ci": "karma start karma-ci.conf.js",
     "clearCoverage": "shx rm -rf coverage",
