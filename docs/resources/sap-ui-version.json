@@ -1,0 +1,59 @@
+{
+	"name": "myDashboard_uimodule",
+	"version": "0.0.1",
+	"buildTimestamp": "202207121507",
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.m",
+			"version": "1.102.1",
+			"buildTimestamp": "202207121507",
+			"scmRevision": "",
+			"manifestHints": {
+				"dependencies": {
+					"libs": {
+						"sap.ui.core": {},
+						"sap.ui.layout": {
+							"lazy": true
+						},
+						"sap.ui.unified": {
+							"lazy": true
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "sap.ui.core",
+			"version": "1.102.1",
+			"buildTimestamp": "202207121507",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.102.1",
+			"buildTimestamp": "202207121507",
+			"scmRevision": "",
+			"manifestHints": {
+				"dependencies": {
+					"libs": {
+						"sap.ui.core": {}
+					}
+				}
+			}
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.102.1",
+			"buildTimestamp": "202207121507",
+			"scmRevision": "",
+			"manifestHints": {
+				"dependencies": {
+					"libs": {
+						"sap.ui.core": {}
+					}
+				}
+			}
+		}
+	]
+}
