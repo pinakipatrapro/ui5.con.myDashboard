@@ -1,1 +1,0 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){"use strict";return n.extend("ui5.con.myDashboard.controller.controller.App",{onInit(){}})});
